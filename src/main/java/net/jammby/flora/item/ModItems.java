@@ -9,9 +9,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Flora.MOD_ID);
 
-public static final DeferredItem<Item> HONEY_SUCKLE = ITEMS.register("honey_suckle",
-        () -> new Item(new Item.Properties()));
+//public static final DeferredItem<Item> GILDED_TULIP = ITEMS.register("gilded_tulip",
+//        () -> new Item(new Item.Properties()));
 
-
+//the green one above is the one buggin
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }

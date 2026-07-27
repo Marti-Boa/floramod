@@ -46,7 +46,7 @@ authors="Jammby, That1Slime9540"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Flora Mod: Adds New Flowers etc
+Flora Mod: Adds New Flowers for the player to find
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
