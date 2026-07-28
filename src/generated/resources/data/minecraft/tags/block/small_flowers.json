@@ -1,5 +1,11 @@
 {
   "values": [
-    "flora:gilded_tulip"
+    "flora:gilded_tulip",
+    "flora:moon_blossom",
+    "flora:tulip_bushel",
+    "flora:vile_bloom",
+    "flora:small_cactus",
+    "flora:gloom_bell",
+    "flora:lavender"
   ]
 }

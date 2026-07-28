@@ -26,6 +26,46 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.SMALL_FLOWERS)
                 .add(ModBlocks.GILDED_TULIP.get());
+
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.MOON_BLOSSOM.get());
+
+        tag(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.MOON_BLOSSOM.get());
+
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.TULIP_BUSHEL.get());
+
+        tag(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.TULIP_BUSHEL.get());
+
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.ALOE_VERA.get());
+
+//make so aloe vera can be placed on sand
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.VILE_BLOOM.get());
+
+        tag(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.VILE_BLOOM.get());
+
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.SMALL_CACTUS.get());
+
+        tag(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.SMALL_CACTUS.get());
+
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.GLOOM_BELL.get());
+
+        tag(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.GLOOM_BELL.get());
+
+        tag(BlockTags.FLOWERS)
+                .add(ModBlocks.LAVENDER.get());
+
+        tag(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.LAVENDER.get());
     }
 
 }

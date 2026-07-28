@@ -20,6 +20,13 @@ public class ModCreativeModeTabs {
                             .title(Component.translatable("creativetab.flora.flora_tab"))
                             .displayItems((itemDisplayParameters, output) -> {
                             output.accept(ModBlocks.GILDED_TULIP.get());
+                            output.accept(ModBlocks.MOON_BLOSSOM.get());
+                            output.accept(ModBlocks.TULIP_BUSHEL.get());
+                            output.accept(ModBlocks.ALOE_VERA.get());
+                            output.accept(ModBlocks.VILE_BLOOM.get());
+                            output.accept(ModBlocks.SMALL_CACTUS.get());
+                            output.accept(ModBlocks.GLOOM_BELL.get());
+                            output.accept(ModBlocks.LAVENDER.get());
 
 
 

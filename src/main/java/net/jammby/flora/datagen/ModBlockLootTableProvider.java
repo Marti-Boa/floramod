@@ -20,6 +20,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
 
         dropSelf(ModBlocks.GILDED_TULIP.get());
+        dropSelf(ModBlocks.MOON_BLOSSOM.get());
+        dropSelf(ModBlocks.TULIP_BUSHEL.get());
+        dropSelf(ModBlocks.ALOE_VERA.get());
+        dropSelf(ModBlocks.VILE_BLOOM.get());
+        dropSelf(ModBlocks.SMALL_CACTUS.get());
+        dropSelf(ModBlocks.GLOOM_BELL.get());
+        dropSelf(ModBlocks.LAVENDER.get());
+
 
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
     }

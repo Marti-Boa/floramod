@@ -36,7 +36,110 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock<FlowerBlock> MOON_BLOSSOM = registerBlock(
+            "moon_blossom",
+            () -> new FlowerBlock(
+                    MobEffects.DARKNESS,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
 
+    public static final DeferredBlock<FlowerBlock> TULIP_BUSHEL = registerBlock(
+            "tulip_bushel",
+            () -> new FlowerBlock(
+                    MobEffects.REGENERATION,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
+
+    public static final DeferredBlock<FlowerBlock> ALOE_VERA = registerBlock(
+            "aloe_vera",
+            () -> new FlowerBlock(
+                    MobEffects.HEALTH_BOOST,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.WET_GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
+
+    public static final DeferredBlock<FlowerBlock> VILE_BLOOM = registerBlock(
+            "vile_bloom",
+            () -> new FlowerBlock(
+                    MobEffects.POISON,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
+
+    public static final DeferredBlock<FlowerBlock> SMALL_CACTUS = registerBlock(
+            "small_cactus",
+            () -> new FlowerBlock(
+                    MobEffects.HARM,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.WET_GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
+
+    public static final DeferredBlock<FlowerBlock> GLOOM_BELL = registerBlock(
+            "gloom_bell",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
+
+    public static final DeferredBlock<FlowerBlock> LAVENDER = registerBlock(
+            "lavender",
+            () -> new FlowerBlock(
+                    MobEffects.LUCK,
+                    5,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+            )
+    );
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
@@ -49,3 +152,7 @@ public class ModBlocks {
 
     public static void register(IEventBus eventBus) { BLOCKS.register(eventBus); }
 }
+
+
+
+

@@ -12,6 +12,6 @@ public class ModItems {
 //public static final DeferredItem<Item> GILDED_TULIP = ITEMS.register("gilded_tulip",
 //        () -> new Item(new Item.Properties()));
 
-//the green one above is the one buggin
+
     public static void register(IEventBus eventBus) { ITEMS.register(eventBus); }
 }

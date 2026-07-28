@@ -20,6 +20,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        // No item tags needed for bushes/worldgen yet.
+        // No item tags needed for bushes/net.jammby.flora.worldgen yet.
     }
 }

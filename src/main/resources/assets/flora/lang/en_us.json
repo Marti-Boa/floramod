@@ -1,5 +1,12 @@
 {
   "creativetab.flora.flora_tab": "Flora",
 
-  "block.flora.gilded_tulip": "Gilded Tulip"
+  "block.flora.gilded_tulip": "Gilded Tulip",
+  "block.flora.moon_blossom": "Moon Blossom",
+  "block.flora.tulip_bushel": "Tulip Bushel",
+  "block.flora.aloe_vera": "Aloe Vera",
+  "block.flora.vile_bloom": "Vile Bloom",
+  "block.flora.small_cactus": "Small Cactus",
+  "block.flora.gloom_bell": "Gloom Bell",
+  "block.flora.lavender": "Lavender"
 }
