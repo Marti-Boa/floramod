@@ -1,10 +1,9 @@
 {
   "type": "neoforge:add_features",
   "biomes": [
-    "minecraft:savanna",
     "minecraft:desert",
     "minecraft:wooded_badlands"
   ],
-  "features": "flora:aloe_vera_placed",
+  "features": "flora:small_cactus_placed",
   "step": "vegetal_decoration"
 }

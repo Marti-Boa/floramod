@@ -28,6 +28,12 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> VILE_BLOOM_KEY = registerKey("vile_bloom");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_CACTUS_KEY = registerKey("small_cactus");
+
+    public  static final ResourceKey<ConfiguredFeature<?, ?>> GLOOM_BELL_KEY = registerKey("gloom_bell");
+
+    public  static final ResourceKey<ConfiguredFeature<?, ?>> LAVENDER_KEY = registerKey("lavender");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         register(context, GILDED_TULIP_KEY, Feature.RANDOM_PATCH,
@@ -92,6 +98,44 @@ public class ModConfiguredFeatures {
                         ),
                         List.of(Blocks.GRASS_BLOCK)
                 ));
+
+        register(context, SMALL_CACTUS_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(
+                                        ModBlocks.SMALL_CACTUS.get()
+                                                .defaultBlockState()
+
+                                )
+                        ),
+                        List.of(Blocks.GRASS_BLOCK)
+                )
+        );
+
+        register(context, GLOOM_BELL_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(
+                                        ModBlocks.GLOOM_BELL.get()
+                                                .defaultBlockState()
+                                )
+                        ),
+                        List.of(Blocks.GRASS_BLOCK)
+                ));
+
+        register(context, LAVENDER_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(
+                                        ModBlocks.LAVENDER.get()
+                                                .defaultBlockState()
+                                )
+                        ),
+                        List.of(Blocks.GRASS_BLOCK)
+                ));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
@@ -108,5 +152,9 @@ public class ModConfiguredFeatures {
             FC configuration
     ) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
+
+
     }
+
+
 }

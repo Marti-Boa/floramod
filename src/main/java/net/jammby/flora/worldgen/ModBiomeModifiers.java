@@ -26,8 +26,18 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_ALOE_VERA =
             registerKey("add_aloe_vera");
 
-    public static final ResourceKey<BiomeModifier> ADD_VILE_BLOOM=
+    public static final ResourceKey<BiomeModifier> ADD_VILE_BLOOM =
             registerKey("add_vile_bloom");
+
+    public static final ResourceKey<BiomeModifier> ADD_SMALL_CACTUS =
+            registerKey("add_small_cactus");
+
+    public static final ResourceKey<BiomeModifier> ADD_GLOOM_BELL =
+            registerKey("add_gloom_bell");
+
+    public static final ResourceKey<BiomeModifier> ADD_LAVENDER =
+            registerKey("add_lavender");
+
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -75,7 +85,8 @@ public class ModBiomeModifiers {
                 new BiomeModifiers.AddFeaturesBiomeModifier(
                         HolderSet.direct(
                                 biomes.getOrThrow(Biomes.SAVANNA),
-                                biomes.getOrThrow(Biomes.DESERT)
+                                biomes.getOrThrow(Biomes.DESERT),
+                                biomes.getOrThrow(Biomes.WOODED_BADLANDS)
                         ),
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.ALOE_VERA_PLACED_KEY)
@@ -95,6 +106,49 @@ public class ModBiomeModifiers {
                         ),
                         GenerationStep.Decoration.VEGETAL_DECORATION
                 ));
+
+        context.register(ADD_SMALL_CACTUS,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.DESERT),
+                                biomes.getOrThrow(Biomes.WOODED_BADLANDS)
+
+                        ),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.SMALL_CACTUS_PLACED_KEY)
+                        ),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                ));
+
+        context.register(ADD_GLOOM_BELL,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.MANGROVE_SWAMP),
+                                biomes.getOrThrow(Biomes.SWAMP)
+
+                        ),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.GLOOM_BELL_PLACED_KEY)
+                        ),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                ));
+
+        context.register(ADD_LAVENDER,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.DARK_FOREST),
+                                biomes.getOrThrow(Biomes.SAVANNA),
+                                biomes.getOrThrow(Biomes.FOREST),
+                                biomes.getOrThrow(Biomes.FLOWER_FOREST)
+
+                        ),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.LAVENDER_PLACED_KEY)
+                        ),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                ));
+
+
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

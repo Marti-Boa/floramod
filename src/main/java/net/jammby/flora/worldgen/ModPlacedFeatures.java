@@ -29,6 +29,15 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> VILE_BLOOM_PLACED_KEY =
             registerKey("vile_bloom_placed");
 
+    public static final ResourceKey<PlacedFeature> SMALL_CACTUS_PLACED_KEY =
+            registerKey("small_cactus_placed");
+
+    public static final ResourceKey<PlacedFeature> GLOOM_BELL_PLACED_KEY =
+            registerKey("gloom_bell_placed");
+
+    public static final ResourceKey<PlacedFeature> LAVENDER_PLACED_KEY =
+            registerKey("lavender_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -86,6 +95,42 @@ public class ModPlacedFeatures {
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.VILE_BLOOM_KEY),
                 List.of(
                         RarityFilter.onAverageOnceEvery(64),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                SMALL_CACTUS_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_CACTUS_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(16),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                GLOOM_BELL_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.GLOOM_BELL_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(64),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                LAVENDER_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.LAVENDER_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(96),
                         InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()

@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:dark_forest",
+    "minecraft:savanna",
+    "minecraft:forest",
+    "minecraft:flower_forest"
+  ],
+  "features": "flora:lavender_placed",
+  "step": "vegetal_decoration"
+}
