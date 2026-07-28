@@ -23,6 +23,12 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> TULIP_BUSHEL_PLACED_KEY =
             registerKey("tulip_bushel_placed");
 
+    public static final ResourceKey<PlacedFeature> ALOE_VERA_PLACED_KEY =
+            registerKey("aloe_vera_placed");
+
+    public static final ResourceKey<PlacedFeature> VILE_BLOOM_PLACED_KEY =
+            registerKey("vile_bloom_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -56,6 +62,30 @@ public class ModPlacedFeatures {
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.TULIP_BUSHEL_KEY),
                 List.of(
                         RarityFilter.onAverageOnceEvery(32),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                ALOE_VERA_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.ALOE_VERA_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(32),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                VILE_BLOOM_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.VILE_BLOOM_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(64),
                         InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()

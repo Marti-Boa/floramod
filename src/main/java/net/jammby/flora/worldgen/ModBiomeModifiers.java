@@ -23,6 +23,12 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TULIP_BUSHEL =
             registerKey("add_tulip_bushel");
 
+    public static final ResourceKey<BiomeModifier> ADD_ALOE_VERA =
+            registerKey("add_aloe_vera");
+
+    public static final ResourceKey<BiomeModifier> ADD_VILE_BLOOM=
+            registerKey("add_vile_bloom");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -61,6 +67,31 @@ public class ModBiomeModifiers {
                         ),
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.TULIP_BUSHEL_PLACED_KEY)
+                        ),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                ));
+
+        context.register(ADD_ALOE_VERA,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.SAVANNA),
+                                biomes.getOrThrow(Biomes.DESERT)
+                        ),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.ALOE_VERA_PLACED_KEY)
+                        ),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                ));
+
+        context.register(ADD_VILE_BLOOM,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.DARK_FOREST),
+                                biomes.getOrThrow(Biomes.MANGROVE_SWAMP),
+                                biomes.getOrThrow(Biomes.SWAMP)
+                        ),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.VILE_BLOOM_PLACED_KEY)
                         ),
                         GenerationStep.Decoration.VEGETAL_DECORATION
                 ));

@@ -24,6 +24,10 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> TULIP_BUSHEL_KEY = registerKey("tulip_bushel");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ALOE_VERA_KEY = registerKey("aloe_vera");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VILE_BLOOM_KEY = registerKey("vile_bloom");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         register(context, GILDED_TULIP_KEY, Feature.RANDOM_PATCH,
@@ -59,6 +63,30 @@ public class ModConfiguredFeatures {
                         new SimpleBlockConfiguration(
                                 BlockStateProvider.simple(
                                         ModBlocks.TULIP_BUSHEL.get()
+                                                .defaultBlockState()
+                                )
+                        ),
+                        List.of(Blocks.GRASS_BLOCK)
+                ));
+
+        register(context, ALOE_VERA_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(
+                                        ModBlocks.ALOE_VERA.get()
+                                                .defaultBlockState()
+                                )
+                        ),
+                        List.of(Blocks.GRASS_BLOCK)
+                ));
+
+        register(context, VILE_BLOOM_KEY, Feature.RANDOM_PATCH,
+                FeatureUtils.simplePatchConfiguration(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(
+                                BlockStateProvider.simple(
+                                        ModBlocks.VILE_BLOOM.get()
                                                 .defaultBlockState()
                                 )
                         ),
