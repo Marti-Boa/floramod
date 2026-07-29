@@ -8,6 +8,7 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.MudBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -96,7 +97,7 @@ public class ModConfiguredFeatures {
                                                 .defaultBlockState()
                                 )
                         ),
-                        List.of(Blocks.GRASS_BLOCK)
+                        List.of(Blocks.GRASS_BLOCK, Blocks.MUD)
                 ));
 
         register(context, SMALL_CACTUS_KEY, Feature.RANDOM_PATCH,
@@ -122,7 +123,7 @@ public class ModConfiguredFeatures {
                                                 .defaultBlockState()
                                 )
                         ),
-                        List.of(Blocks.GRASS_BLOCK)
+                        List.of(Blocks.GRASS_BLOCK, Blocks.MUD)
                 ));
 
         register(context, LAVENDER_KEY, Feature.RANDOM_PATCH,
