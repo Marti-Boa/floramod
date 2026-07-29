@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "flora:purple_dye_from_vile_bloom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vile_bloom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flora:vile_bloom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vile_bloom"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flora:purple_dye_from_vile_bloom"
+    ]
+  }
+}

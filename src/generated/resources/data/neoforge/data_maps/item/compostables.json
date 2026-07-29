@@ -1,3 +1,28 @@
 {
-  "values": {}
+  "values": {
+    "flora:aloe_vera": {
+      "chance": 0.3
+    },
+    "flora:gilded_tulip": {
+      "chance": 0.3
+    },
+    "flora:gloom_bell": {
+      "chance": 0.3
+    },
+    "flora:lavender": {
+      "chance": 0.3
+    },
+    "flora:moon_blossom": {
+      "chance": 0.3
+    },
+    "flora:small_cactus": {
+      "chance": 0.3
+    },
+    "flora:tulip_bushel": {
+      "chance": 0.3
+    },
+    "flora:vile_bloom": {
+      "chance": 0.3
+    }
+  }
 }

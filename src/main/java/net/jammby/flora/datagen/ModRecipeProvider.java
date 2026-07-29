@@ -25,10 +25,52 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
+                .requires(ModBlocks.GILDED_TULIP)
+                .unlockedBy(getHasName(ModBlocks.GILDED_TULIP), has(ModBlocks.GILDED_TULIP))
+                .save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LIGHT_BLUE_DYE)
+                .requires(ModBlocks.MOON_BLOSSOM)
+                .unlockedBy(getHasName(ModBlocks.MOON_BLOSSOM), has(ModBlocks.MOON_BLOSSOM))
+                .save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.ORANGE_DYE)
+                .requires(ModBlocks.TULIP_BUSHEL)
+                .unlockedBy(getHasName(ModBlocks.TULIP_BUSHEL), has(ModBlocks.TULIP_BUSHEL))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GREEN_DYE)
+                .requires(ModBlocks.ALOE_VERA)
+                .unlockedBy(getHasName(ModBlocks.ALOE_VERA), has(ModBlocks.ALOE_VERA))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PURPLE_DYE)
+                .requires(ModBlocks.LAVENDER)
+                .unlockedBy(getHasName(ModBlocks.LAVENDER), has(ModBlocks.LAVENDER))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.BLUE_DYE)
+                .requires(ModBlocks.GLOOM_BELL)
+                .unlockedBy(getHasName(ModBlocks.GLOOM_BELL), has(ModBlocks.GLOOM_BELL))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PURPLE_DYE)
+                .requires(ModBlocks.VILE_BLOOM)
+                .unlockedBy(getHasName(ModBlocks.VILE_BLOOM), has(ModBlocks.VILE_BLOOM))
+                .save(recipeOutput,
+                        ResourceLocation.fromNamespaceAndPath(
+                                Flora.MOD_ID,
+                                "purple_dye_from_vile_bloom"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.LIME_DYE)
+                .requires(ModBlocks.SMALL_CACTUS)
+                .unlockedBy(getHasName(ModBlocks.SMALL_CACTUS), has(ModBlocks.SMALL_CACTUS))
+                .save(recipeOutput);
 
     }
+
+
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
